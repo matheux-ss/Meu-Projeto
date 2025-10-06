@@ -1,51 +1,49 @@
 # Meu projeto
 
+```mermaid
+graph TD
+    subgraph "Tipos de Dados"
+        A1[Inteiros]
+        A2[Float]
+        A3[String]
+        A4[Boolean]
+        A5[Listas]
+        A6[Tuplas]
+        A7[Dicionários]
+        A8[Conjuntos]
+    end
 
-@startuml
-title Diagrama Básico de Python
+    subgraph "Estruturas de Controle"
+        B1[If / Else]
+        B2[For]
+        B3[While]
+        B4[Try / Except]
+    end
 
-package "Tipos de Dados" {
-    class Inteiros
-    class Float
-    class String
-    class Boolean
-    class Lista
-    class Tupla
-    class Dicionario
-    class Conjunto
-}
+    subgraph "Funções e Classes"
+        C1[Função]
+        C2[Classe]
+        C3[Método]
+        C4[Herança]
+    end
 
-package "Estruturas de Controle" {
-    class If_Else
-    class For
-    class While
-    class Try_Except
-}
+    %% Conexões de tipos de dados
+    A1 --> Z[Operações Matemáticas]
+    A2 --> Z
+    A3 --> Y[Manipulação de Texto]
+    A5 --> X[Coleções]
+    A6 --> X
+    A7 --> X
+    A8 --> X
 
-package "Funções e Classes" {
-    class Funcao
-    class Classe
-    class Metodo
-    class Heranca
-}
+    %% Conexões de estruturas de controle
+    B1 --> W[Fluxo de Controle]
+    B2 --> W
+    B3 --> W
+    B4 --> V[Tratamento de Erros]
 
-Inteiros --> "Operações Matemáticas"
-Float --> "Operações Matemáticas"
-String --> "Manipulação de Texto"
-Lista --> "Coleções"
-Tupla --> "Coleções"
-Dicionario --> "Coleções"
-Conjunto --> "Coleções"
-
-Funcao --> "Reutilização de Código"
-Classe --> "Programação Orientada a Objetos"
-Metodo --> Classe
-Heranca --> Classe
-
-If_Else --> "Fluxo de Controle"
-For --> "Fluxo de Controle"
-While --> "Fluxo de Controle"
-Try_Except --> "Tratamento de Erros"
-
-@enduml
-
+    %% Conexões de funções e classes
+    C1 --> U[Reutilização de Código]
+    C2 --> T[Programação Orientada a Objetos]
+    C3 --> C2
+    C4 --> C2
